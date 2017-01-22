@@ -1,6 +1,6 @@
 var dB = firebase.database();    // database used in FireBase
 var markers; //keeps track of all markers currently on map
-
+var map; //google apps map
 
 //loads the users events they are looking for/willing to drive.
 //returns JSON with the data
