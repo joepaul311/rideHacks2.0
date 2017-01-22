@@ -21,22 +21,18 @@
                 messagingSenderId: "283348506185"
             };
             firebase.initializeApp(config);
-            //var dB = firebase.database();
-            //dB.ref("newnew/dog").set({
-            //    apple:"A",
-            //    banana:"B"               
-            //});
         </script>
         <!--/ FIREBASE magic -->
-        <script src = "rideHacks2scripts.js"></script>
+        
+	<script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAG-3s-21Zdv17aj45vf1bvTPMwm59H0uo&callback=initMap"> </script>
+	<script src = "rideHacks2scripts.js"></script>
+	<script src = "rideHacks2MapScripts.js"></script>
         <script>
             var val = loadAllEvents();
-            //console.log(val);
+       
         </script>
-
     </head>
     <body>
-
         <div class="container">
             <h2>Dynamic Tabs</h2>
             <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
@@ -58,11 +54,10 @@
                 </div>
                 <div id="findEvents" class="tab-pane fade">
                     <h3>Find Events</h3>
-                    <p>Map and Even selecting goes here</p>
+		    <div id = "map"> </div>
                 </div>
             </div>
-        </div>
-
+        </div>	
     </body>
 </html>
 
