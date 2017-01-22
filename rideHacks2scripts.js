@@ -13,7 +13,7 @@ function loadUserEvents() {
 
 //gets snapshot of the database
 function getSnapshot() {
-    return dB.ref("").once('value').then(functionn(snapshot)){
+    return dB.ref("").once('value').then(function(snapshot)){
         return snapshot.val();   
     }
 }
