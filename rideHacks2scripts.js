@@ -7,7 +7,7 @@ var map; //google apps map
 function loadUserEvents() {
     var obj = getSnapshot()["usersList"];
     for(var i in obj) {
-        if(i["userName"] == USERNAME GOES HERE !!!!) {
+        if(i["userName"] == "username") {
             return i;
         }
     }
@@ -15,9 +15,9 @@ function loadUserEvents() {
 
 //gets snapshot of the database
 function getSnapshot() {
-    return dB.ref("").once('value').then(function(snapshot)){
+    return dB.ref("").once('value').then(function(snapshot){
         return snapshot.val();   
-    }
+    });
 }
 
 
