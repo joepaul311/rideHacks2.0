@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+            @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+            
+            html {
+
+                background-color: #9ED5DF;
+                position: relative; 
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            h2 { 
+                font-size: 24px; 
+                text-align: center;
+                line-height: 30px; 
+                margin: 0; 
+                padding: 10px; 
+            }
+            
+            input {
+                margin-bottom: 5px;
+            }
+            
+            .form
+            {
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
+
+                color: #000; 
+                background-color: #FFF; 
+                margin: 100px auto 0; 
+                padding: 20px 20px 20px; 
+                position: relative; 
+                width: 330px; 
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="form">
+            <h2>Create a New Account</h2>
+            <form>
+                <label>Username</label> <br>
+                <input type="text" id="username" size="30" required autofocus>
+                <br>
+                <label>Email</label> <br>
+                <input type="email" id="email" size="30" required>
+                <br>
+                <label>Password</label> <br>
+                <input type="password" id="password" size="30" pattern=".{6}.*" title="Password must be at least 6 characters." required>
+                <br>
+                <label>Confirm Password</label> <br>
+                <input type="password" id="confirmPass" size="30" pattern=".{6}.*" required>
+                <br>
+                <input type="submit" value="Sign Up" onclick="signUp">
+            </form>
+        </div>
+        <script>
+            function signUp()
+            {
+                
+            }
+            var password = document.getElementById("password");
+            var confirmPass = document.getElementById("confirmPass");
+            
+            function confirmPassword()
+            {
+                
+                
+                if(password.value != confirmPassword.value)
+                {
+                    confirmPass.setCustomValidity("Passwords Don't Match");
+                }
+                else
+                {
+                    confirmPass.setCustomValidity('');
+                }
+            }
+            
+            password.onchange = confirmPassword;
+            confirmPass.onkeyup = confirmPassword;
+        </script>
+    </body>
+</html>
